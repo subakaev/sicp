@@ -12,7 +12,7 @@
 
 (define calc-precision 0.000001)
 
-(define (abs x) ((if (< x 0) - +) 0 x))
+(define (abs x) (if (< x 0) (- x) x))
 
 (define (sqrt x)
   (define (improve guess) (/ (+ guess (/ x guess)) 2))
