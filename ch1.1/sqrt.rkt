@@ -4,9 +4,13 @@
 
 (define (abs x) ((if (< x 0) - +) 0 x))
 
+(define (square x) (* x x))
+
+(define (average x y) (/ (+ x y) 2))
+
 (define (sqrt x)
-  (define (good-enough guess) (< (abs (- (* guess guess) x)) calc-precision))
-  (define (improve guess) (/ (+ guess (/ x guess)) 2))
+  (define (good-enough guess) (< (abs (- (square guess) x)) calc-precision))
+  (define (improve guess) (average guess (/ x guess)))
   (define (sqrt-iter guess) 
     (if (good-enough guess) 
         guess 
