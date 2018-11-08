@@ -15,7 +15,4 @@
   (sqrt-iter 1.0)
 )
 
-(abs -1)
-
-(sqrt 2)
-
+(sqrt 200000)
