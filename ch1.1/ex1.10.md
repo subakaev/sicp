@@ -43,7 +43,7 @@
 2^16
 ```
 
-#Expression 3
+## Expression 3
 ```scheme
 (A 3 3)
 ```
